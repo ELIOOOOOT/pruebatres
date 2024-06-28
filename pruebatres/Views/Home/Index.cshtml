@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Alumnos - Colegio Primavera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cabezon {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .cabezon h1 {
+                margin: 0;
+                font-size: 2em;
+            }
+
+            .cabezon p {
+                font-size: 1.2em;
+                color: #666;
+            }
+
+        .grupoFormulario {
+            margin-bottom: 15px;
+        }
+
+            .grupoFormulario label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .grupoFormulario input {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+        .contenedorBotones {
+            text-align: center;
+        }
+
+        .botones {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .botones:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="cabezon" aria-labelledby="gestionarAlumnos">
+            <h1 id="gestionarAlumnos">Gestión de Alumnos</h1>
+            <p>Registrar, actualizar y eliminar registros de alumnos</p>
+        </header>
+
+        <form id="formulario">
+            <div class="grupoFormulario">
+                <label for="alumnoID">ID Alumno</label>
+                <input type="number" id="alumnoID" name="alumnoID" required>
+            </div>
+            <div class="grupoFormulario">
+                <label for="alumnoNombre">Nombre</label>
+                <input type="text" id="alumnoNombre" name="alumnoNombre" maxlength="45" required>
+            </div>
+            <div class="grupoFormulario">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            <div class="contenedorBotones">
+                <button type="submit" class="botones" onclick="accionFormulario('registrar')">Registrar</button>
+                <button type="submit" class="botones" onclick="accionFormulario('actualizar')">Actualizar</button>
+                <button type="submit" class="botones" onclick="accionFormulario('eliminar')">Eliminar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function accionFormulario(accion) {
+            // Lógica para manejar las acciones del formulario (Registrar, Actualizar, Eliminar)
+            alert('Acción seleccionada: ' + accion);
+        }
+    </script>
+</body>
+</html>
